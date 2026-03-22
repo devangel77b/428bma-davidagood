@@ -1,0 +1,86 @@
+%
+%\documentclass[Journal]{ascelike}
+% \documentclass[Proceedings]{ascelike}
+\documentclass[Preprint,10pt]{ascelike}
+%
+% Jan. 30, 2025
+%
+% include this line for producing ASCE-sytle citations and bibliography
+\usepackage{biblatex}
+% !!! Note that you should use "biber", not "bibtex", to process the citations.
+%
+% state your bibliographic ".bib" databases here.  Include the suffix ".bib".
+\addbibresource{ascexmpl.bib}
+%
+% the following are some useful packages, but it's your choice
+%
+% handling graphics in figures
+\usepackage{graphicx}
+%
+% AMS macros and fonts
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+%
+% the booktabs package, for nicer tables
+\usepackage{booktabs}
+  \setlength\heavyrulewidth{1.5pt}
+  \setlength\lightrulewidth{1.0pt}
+  \setlength\abovetopsep{0pt}
+  \setlength\belowrulesep{0pt}
+%
+% to use hyperlinks within pdf document (with pdflatex, not latex):
+%\usepackage[colorlinks=true,citecolor=red,linkcolor=black]{hyperref}
+%
+% NOTE: Don't include the \NameTag{<your name>} if you have selected
+%       the NoPageNumbers option: this leads to an inconsistency and
+%       a warning, and the NameTag is ignored.
+\NameTag{Ma \emph{et al}, \today}
+%
+%
+\begin{document}
+%
+% with Journal, manually make first letters uppercase
+\title{Bridge design}
+%
+% enter authors and affiliations in the manner of the authblk.sty package.
+% Authors' [*] are matched with affiliations' [*]
+\author[1]{Finn Blair}
+\author[1]{Avvin Budhiraja}
+\author[1]{Michael Christie}
+\author[1]{Matthew Henkel}
+\author[1]{Brandon Ma}
+\author[1]{Nikita Parkhomovsky}
+\author[1]{Liam Pladl}
+\author[1]{Vedant Umesh}
+\affil[1]{Science \& Engineering Magnet Program,
+          Manalapan High School, 20 Church Lane,
+          Englishtown, NJ 07726. E-mail: 428bma@frhsd.com.}
+\affil[2]{Affiliation of the second and third authors.}
+%
+% you must process the title and authors
+\maketitle
+%
+\begin{abstract}
+Abstract here
+\end{abstract}
+%
+% for the Preprint option, the next line creates two-column documents.
+% You can leave the line here, even if you don't use the Preprint option
+\ifthenelse{\boolean{Preprint}}{\begin{multicols}{2}}{}
+%
+% this begins the document's text
+\section{Introduction}\label{sec:Introduction}
+Blah blah. 
+
+%
+% Here, we use "\printbibliography" to create an "*.aux" file that can be
+% processed with biber, using the stylefiles, ascelike.bbx and ascelike.cbx
+\printbibliography
+%
+%
+% the next line is for the Preprint option, for a two-column preprint. You
+% can leave the line here, even if you don't use the Preprint option
+\ifthenelse{\boolean{Preprint}}{\end{multicols}}{}
+%
+\end{document}
